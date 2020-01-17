@@ -1,0 +1,30 @@
+EXTENSIONS !!!
+
+(located inside of play method)
+- unselect piece if the same piece is selected
+
+AUTOMATIC DELETION
+  autoDelete(); - in the beginning, after a piece is swapped and at the end to make sure that there are no
+  additional chains on the board before you swap
+  this will loop through the board until it sees that there are no chains left
+
+CHECK TO SEE IF THERE ARE ANY POSSIBLE MATCHES ON THE BOARD
+  noMoves(int using); - checks to see if there are any possible moves on the board, if there are not then it 
+  will reset the board to new pieces. the using int is used for hint checking
+
+HINTS
+  showHints(); - if the user asks for a hint, it will highlight the closest match to the top, using the
+  noMoves(int using); method.
+
+SET NUMBER OF MOVES
+  changeMoveNumber(); - if the user wants to choose their number of moves, they can and it will update the board,
+  score, and number of moves 
+
+SET SCORE TO BEAT 
+  changeBeatScore(); - if the user wants to change the beat score, then they can change it and it will
+  update the score they need to beat to pass. this will update the board, score and the number of moves.
+
+REPLAY THE GAME
+  gui.showReplayGameMessage(); - this will be displayed at the end of the game. if the user chooses yes, then
+  the board, score and number of moves left will reset
+  if they choose no, the game will exit
